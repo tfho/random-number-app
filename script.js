@@ -1,10 +1,13 @@
 const randomButton = document.querySelector("#random-btn")
+const min = document.querySelector("#min")
+const max = document.querySelector("#max")
+
 
 randomButton.addEventListener(
     "click",
     ()=>{
         document.querySelector("#result").textContent = Math.floor(
-            getRandomNumber(1,100)
+            getRandomNumber(Number(min.value),Number(max.value))
         )
     }
 )
